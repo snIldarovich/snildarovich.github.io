@@ -1,0 +1,169 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+body {
+   overflow-x: hidden;
+}
+.container-fluid {
+   max-width: 1170px;
+   width: 100%;
+   margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+ul,
+li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   display: inline-block;
+   text-decoration: none;
+   color: $black;
+
+   &:hover {
+      text-decoration: none;
+      color: $black;
+   }
+}
+
+.block__phone {
+   margin-left: -23px;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 22px;
+}
+
+.btn-1 {
+   margin-top: -15px;
+   padding: 8px 9px;
+   background: $greenlight;
+   border-radius: 3px;
+   color: $green-hover;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 17px;
+   letter-spacing: 0.01em;
+   transition: all ease-in-out 0.3s;
+
+   &:hover {
+      background-color: $greenlight-hover;
+      color: $green-hover;
+   }
+
+   a {
+      text-transform: none;
+   }
+}
+
+.btn-2 {
+   margin-top: -15px;
+   padding: 15px 25px;
+   background: $yellow;
+   border-radius: 3px;
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 18px;
+   letter-spacing: 0.01em;
+   transition: all ease-in-out 0.3s;
+
+   &:hover {
+      background-color: $orange;
+   }
+
+   a {
+      text-transform: none;
+   }
+}
+
+.btn-3 {
+   margin-top: 23px;
+   padding: 12px 21px;
+   background: $green;
+   color: $white;
+   border-radius: 3px;
+   font-weight: 600;
+   font-size: 15px;
+   line-height: 18px;
+   letter-spacing: 0.01em;
+   transition: all ease-in-out 0.3s;
+
+   &:hover {
+      background-color: $green-hover;
+      color: $white;
+   }
+
+   a {
+      text-transform: none;
+   }
+}
+
+
+// чтобы не появлялась рамка
+.slick-active,
+.slick-slide,
+.slick-current {
+   outline: none;
+}
+
+input::placeholder {
+   font-family: Montserrat;
+   color: rgba(0, 0, 0, 0.6);
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 17px;
+}
+
+input[type=text]::-ms-clear {
+   display: none;
+   width: 0;
+   height: 0;
+}
+
+input[type=text]::-ms-reveal {
+   display: none;
+   width: 0;
+   height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+   display: none;
+}
+.menu__burger.active {
+   position: relative;
+
+   img {
+      display: none;
+   }
+   &::after{
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 25px;
+      background-image: url(../images/burger-click.png);
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+
+   }
+}
+.menu__sides.active {
+   visibility: visible;
+   margin-top: 139px;
+   z-index: 1;
+   position: absolute;
+   height: 200px;
+   
+}
