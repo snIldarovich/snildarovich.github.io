@@ -7,4 +7,7 @@
 [Практика css](https://snildarovich.github.io/start/# "тренировочная страничка")  
 [Практика scss, gulp "Многостраничник"](https://snildarovich.github.io/many-pages/# "Многостраничник")  
   
-[Интернет-магазин "главная страничка"](https://snildarovich.github.io/dist/# "Интернет-магазин")  
+[Интернет-магазин]:  
+*["Главная страничка"](https://snildarovich.github.io/dist/# "Главная") 
+  *["Страница товара"](https://snildarovich.github.io/dist/product-page.html "Страница товара") 
+  *["Каталог"](https://snildarovich.github.io/dist/catalog.html "Каталог") 
