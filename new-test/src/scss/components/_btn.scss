@@ -1,0 +1,21 @@
+.btn {
+  @include flex-all-center;
+
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 14px 10px;
+  width: 100%;
+  max-width: 183px;
+  font-weight: 400;
+  font-size: var(--small-size);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--light-color);
+  background: var(--accent-color);
+  transition: all ease-in-out 0.3s;
+}
+
+.btn:hover {
+  color: var(--btn-hover-color);
+  background: var(--light-color);
+}

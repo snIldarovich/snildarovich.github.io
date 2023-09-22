@@ -1,0 +1,21 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы (большие компоненты)
+@import "./components/header";
+@import "./components/about";
+@import "./components/order";
+@import "./components/footer";
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "./components/btn";
+@import "./components/select";
+@import "./components/scrollbar";
+
+// подключениe медиа-запросов (отличаются от основных:
+
+// - декстоп, планшет, мобилка
+@import "media";
