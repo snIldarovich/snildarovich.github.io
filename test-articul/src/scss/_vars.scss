@@ -1,0 +1,16 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+
+  --font-family-title: "RAYDIS", sans-serif;
+  --font-family: "Zekton", sans-serif;
+  --content-width: 1920px;
+  --container-offset: 60px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --dark-color: #000;
+  --accent-color: #c31e54;
+}

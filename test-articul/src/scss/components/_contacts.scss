@@ -1,0 +1,116 @@
+.contacts {
+  margin: 8.5rem 0;
+
+  &__inner {
+    @include flex-center-start;
+
+    column-gap: 19rem;
+  }
+
+  &__items.animate {
+    @include flex-end-end;
+
+    flex-direction: column;
+    grid-gap: 1.3rem;
+    margin-left: -4rem;
+    padding: 4rem 0;
+    width: 100%;
+    max-width: 32rem;
+    animation: left 1.85s;
+  }
+
+  @keyframes left {
+    0% {
+      opacity: 0;
+      transform: translateX(-900%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__item {
+    border: 3px solid var(--accent-color);
+    border-radius: 5.5rem;
+    padding: 1.2rem 1.4rem;
+  }
+
+  &__item:nth-child(1) {
+    margin-right: -6rem;
+    margin-bottom: 2.5rem;
+    transform: rotate(45deg);
+  }
+
+  &__item:nth-child(3) {
+    margin-top: 0.5rem;
+    margin-right: -11rem;
+    transform: rotate(-45deg);
+  }
+
+  &__item-text {
+    font-family: var(--font-family-title);
+    font-size: 1.4rem;
+    letter-spacing: 0.32rem;
+  }
+
+  &__text.animate {
+    margin-top: 3rem;
+    max-width: 800px;
+    font-family: var(--font-family-title);
+    font-size: 2.25rem;
+    line-height: 3.1rem;
+    letter-spacing: 0.5rem;
+    animation: right 2.4s;
+  }
+
+  @keyframes right {
+    0% {
+      opacity: 0;
+      transform: translateX(2000%);
+    }
+
+    30% {
+      opacity: 0;
+      transform: translateX(1000%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__btn {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    color: var(--light-color);
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-color) 50%, #fff 0);
+    background-position: 100%;
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.3s ease;
+  }
+
+  &__btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    width: 98%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-color) 50%, #fff 0);
+    background-position: 100%;
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+  }
+
+  &__btn:hover,
+  &__btn:hover::after {
+    background-position: 0 100%;
+  }
+
+}

@@ -1,0 +1,269 @@
+.banner {
+  padding: 5rem 0;
+
+  &__inner {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 415px;
+    max-width: 560px;
+  }
+
+  &__items-wrapper {
+    display: flex;
+    align-self: start;
+    justify-content: end;
+    width: 100%;
+    height: 550px;
+    transform: rotate(-90deg);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    grid-gap: 1.3rem;
+    animation: top 1s;
+  }
+
+  @keyframes top {
+    0% {
+      opacity: 0;
+      transform: translateX(400%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__item {
+    border: 3px solid var(--accent-color);
+    border-radius: 5.5rem;
+    padding: 1.12rem 1.4rem;
+  }
+
+  &__item:first-child {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 4rem;
+    margin-left: -1rem;
+    transform: rotate(135deg);
+    animation: width-rotate 2.5s;
+  }
+
+  @keyframes width-rotate {
+    0% {
+      margin-bottom: 0;
+      margin-left: 0;
+      transform: rotate(180deg);
+    }
+
+    60% {
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 26rem;
+      transform: rotate(180deg);
+    }
+
+    100% {
+      margin-bottom: 4rem;
+      margin-left: -1rem;
+      width: 15.2rem;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__item:nth-child(3) {
+    animation: width-3 2.5s;
+  }
+
+  @keyframes width-3 {
+    0% {
+      width: 26rem;
+    }
+
+    60% {
+      width: 26rem;
+    }
+
+    100% {
+      width: 14.8rem;
+    }
+  }
+
+  &__item:nth-child(4) {
+    animation: width-4 2.5s;
+  }
+
+  @keyframes width-4 {
+    0% {
+      width: 26rem;
+    }
+
+    60% {
+      width: 26rem;
+    }
+
+    100% {
+      width: 16.25rem;
+    }
+  }
+
+  &__item:nth-child(5) {
+    animation: width-5 2.5s;
+  }
+
+  @keyframes width-5 {
+    0% {
+      width: 26rem;
+    }
+
+    60% {
+      width: 26rem;
+    }
+
+    100% {
+      width: 25.3rem;
+    }
+  }
+
+  &__item-text {
+    font-family: var(--font-family-title);
+    font-size: 1.4rem;
+    letter-spacing: 0.38rem;
+  }
+
+  &__title {
+    margin-top: -8.5rem;
+    margin-right: 3.5rem;
+    text-align: right;
+    animation: up 1s;
+  }
+
+  @keyframes up {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__title--red {
+    display: block;
+    text-align: left;
+    color: var(--accent-color);
+  }
+
+  &__title,
+  &__title--red {
+    font-family: var(--font-family-title);
+    font-size: 10.5rem;
+    line-height: 10.5rem;
+    letter-spacing: 2.35rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include flex-h-sb;
+
+    position: relative;
+    height: 100%;
+  }
+
+  &__slogan {
+    margin-top: 3.5rem;
+    margin-left: 28.25rem;
+    max-width: 24.5vw;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.07rem;
+    animation: under 2s;
+
+  }
+
+  &__announce {
+    @include flex-all-center;
+
+    margin-top: -6.25rem;
+    margin-right: 10.75rem;
+    border-radius: 50%;
+    width: 11.5rem;
+    height: 11.5rem;
+    animation: under 2s;
+  }
+
+  @keyframes under {
+    0% {
+      margin-top: -2rem;
+      opacity: 0;
+    }
+
+    50% {
+      margin-top: -2rem;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__announce-num {
+    height: 50%;
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    font-size: 8.5rem;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__announce-description {
+    position: absolute;
+    animation: rotate 2s ease-out, rotate-inf 10s linear infinite 2s;
+  }
+
+  &__announce-description span {
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    top: calc(50% - 11rem);
+    width: 2rem;
+    height: 11rem;
+    font-weight: 700;
+    font-size: 2.875rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    transform-origin: bottom center;
+    animation: fan 2 ease-out forwards;
+  }
+
+  @keyframes fan {
+    from {
+      opacity: 0;
+      transform: rotateZ(-100deg);
+    }
+
+    to {
+      transform: rotateZ(calc(var(--i) * 20deg));
+    }
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotate-inf {
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+}
