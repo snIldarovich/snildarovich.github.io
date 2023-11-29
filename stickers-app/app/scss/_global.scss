@@ -1,0 +1,220 @@
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.stickers {
+  // position: relative;
+  padding: 35px 0;
+}
+
+.stickers__slider-inner {
+  // height: 875px;
+}
+
+.stickers__slider {
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin-top: 20px;
+  border-radius: 150px;
+  width: 100%;
+  max-width: 310px;
+}
+
+.stickers__box {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.stickers__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stickers__slide img {
+  position: relative;
+  z-index: -1;
+  margin: 0 auto;
+  max-width: 260px;
+  object-fit: cover;
+}
+
+.stickers__slide:first-child img {
+  max-width: 224px;
+}
+
+.stickers__slider.swiper-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  // background-position: center;
+  // background-size: cover;
+}
+
+// .gallery-thumbs .swiper-slide-thumb-active {
+//   opacity: 1;
+// }
+
+.stickers__slide.swiper-slide {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.stickers__slide.swiper-slide-active {
+  opacity: 1;
+}
+
+.stickers__slider-thumbs .swiper-wrapper {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100% !important;
+  transform: unset !important;
+}
+
+.stickers__slider-thumbs {
+  transition: all 1.3s;
+  scroll-behavior: smooth;
+  // opacity: 0;
+  overflow: hidden;
+  height: auto;
+  max-height: 244px;
+}
+
+.stickers__slide-thumb.swiper-slide {
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 120px;
+}
+
+.stickers__slide-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  height: 118px;
+  cursor: pointer;
+}
+
+.stickers__slide-thumb img {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.stickers__slide-thumb:first-child img {
+  height: auto;
+  max-width: 50px;
+}
+
+.stickers__btn {
+  position: relative;
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin: 35px auto 0;
+  outline: none;
+  border: none;
+  font: normal 600 16px/24px "Golos", sans-serif;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+.stickers__btn span {
+  padding-left: 210px;
+}
+
+.stickers__btn.active span {
+  padding-left: 60px;
+}
+
+.stickers__btn svg {
+  transition: all 0.3s;
+}
+
+.stickers__btn.active svg {
+  transform: rotate(-180deg);
+}
+
+.stickers__btn span::before {
+  content: "Посмотреть все Стикерсы";
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stickers__btn.active span::before {
+  content: "Скрыть";
+}
+
+.stickers__btn+.stickers__slider-thumbs {
+  // margin-top: 1.25rem;
+  opacity: 1;
+}
+
+.stickers__content {
+  padding: 30px 0;
+  height: 200px;
+}
+ .stickers__slider-content {
+  position: relative;
+}
+
+.stickers__item {
+  position: absolute;
+  opacity: 0; 
+  // transition: all 1.3s;
+    // transform: translateY(-20px);
+
+}
+
+.stickers__item.stickers__item-title {
+  // margin-top: -20px;
+  // transition: all 1.3s;
+}
+
+.stickers__item--active.stickers__item-title {
+}
+.stickers__item-text {
+  // opacity: 0;
+  // transform: translateY(-20px);
+
+}
+.stickers__item--active .stickers__item-text {
+// opacity: 1;
+  // transform: translateY(0px);
+}
+
+.stickers__item--active {
+  opacity: 1;
+    // transform: translateY(0px);
+
+}
+
+.stickers__slide-thumb {}
+
+.stickers__slide-thumb--active {}
+
+
+// .stickers__slide-title {
+//   position: absolute;
+//   top: 0;
+// }
+
+// .stickers__slide-text {
+//   position: absolute;
+//   bottom: -140px;
+//   z-index: 3;
+// }
