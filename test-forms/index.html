@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test-forms</title>
+  <script type="module" crossorigin src="assets/index-DHwiSsEt.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/index-ByxriwaP.css">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container">
+        <div class="header__items">
+          <section class="header__item">
+            <img class="header__logo" src="images/logo.png" loading="lazy" alt="Лого">
+            <h4 class="header__title">
+              Услуги и сервисы Пермского края
+            </h4>
+          </section>
+          <div class="header__item">
+            <a class="header__login" href="#">
+              Константинопольский К.К
+            </a>
+            <a class="header__logout" href="#">
+              Выйти
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="about">
+          <div class="about__inner">
+            <div class="about__descr">
+              <h1 class="about__title">
+                Выдача градостроительного плана земельного участка
+              </h1>
+              <p class="about__text">
+                Градостроительный план земельного участка выдается в&nbsp;целях обеспечения субъектов градостроительной
+                деятельности информацией, необходимой для&nbsp;архитектурно-строительного проектирования, строительства,
+                реконструкции объектов капитального строительства в&nbsp;границах земельного участка.
+              </p>
+            </div>
+            <div class="about__note">
+              <img class="about__logo" src="images/gerb.png" loading="lazy" alt="Лого местного органа самоуправления">
+              <p class="about__note-text_bold">
+                <b>Услугу предоставляет</b>
+              </p>
+              <p class="about__note-text">
+                Орган местного самоуправления
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="order">
+          <form id="forms" class="forms">
+            <fieldset id="form-1" class="form">
+              <div class="form__inner">
+                <span class="form__step">1</span>
+                <legend class="form__title">
+                  Выбор заявителя
+                </legend>
+                <div class="form__content">
+                  <label class="form__label">
+                    <input class="form__radio" name="radio" type="radio">
+                    <span class="form__radio_custom"></span>
+                    <b>
+                      Константинопольский К.К.
+                    </b>
+                    Физическое лицо
+                  </label>
+                  <label class="form__label">
+                    <input class="form__radio" name="radio" type="radio">
+                    <span class="form__radio_custom"></span>
+                    <b>ООО «Константинополь»</b>
+                    Юридическое лицо
+                  </label>
+                  <div id="error-1" class="form__error">
+                    Пожалуйста, еще раз внимательно проверьте все данные перед отправкой 
+                  </div>
+                  <button id="button-1" class="form__button" type="button">
+                    Продолжить
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset id="form-2" class="form form_inactive">
+              <div class="form__inner">
+                <span class="form__step">2</span>
+                <legend class="form__title">
+                  Данные заявителя
+                </legend>
+                <div class="form__content">
+                  <label class="form__label-text">
+                    Фамилия
+                    <input class="form__input" type="text" placeholder="Константинопольский" required>
+                  </label>
+                  <label class="form__label-text">
+                    Имя
+                    <input class="form__input" type="text" placeholder="Константин" required>
+                  </label>
+                  <label class="form__label-text">
+                    Отчество
+                    <input class="form__input" type="text" placeholder="Константинович" required>
+                  </label>
+                  <label class="form__label-text">
+                    Электронная почта
+                    <input class="form__input" type="email" placeholder="konstantinopolskiy@mail.ru" required>
+                  </label>
+                  <label class="form__label-text">
+                    Телефон
+                    <input class="form__input" type="tel" placeholder="+7 (901) 123-45-67" required>
+                  </label>
+                  <p class="form__text">
+                    Документ, удостоверяющий личность
+                  </p>
+                  <label class="form__label-text">
+                    Документ
+                    <input class="form__input" type="text" placeholder="Паспорт" required>
+                  </label>
+                  <div class="form__passport_serial">
+                    <label class="form__label-text">
+                      Серия
+                      <input class="form__input" type="number" placeholder="5700" required>
+                    </label>
+                    <label class="form__label-text">
+                      Номер
+                      <input class="form__input" type="number" placeholder="555888" required>
+                    </label>
+                  </div>
+                  <div class="form__passport_when">
+                    <p class="form__passport-text form__label-text">
+                      Когда выдан
+                    </p>
+                    <label class="form__label-text">
+                      День
+                      <input class="form__input" type="number" placeholder="19" required>
+                    </label>
+                    <label class="form__label-text">
+                      Месяц
+                      <input class="form__input" type="number" placeholder="10" required>
+                    </label>
+                    <label class="form__label-text">
+                      Год
+                      <input class="form__input" type="number" placeholder="1990" required>
+                    </label>
+                  </div>
+                  <div id="error-2" class="form__error">
+                    Пожалуйста, еще раз внимательно проверьте все данные перед отправкой 
+                  </div>
+                  <button id="button-2" class="form__button" type="button">
+                    Продолжить
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset id="form-3" class="form form_inactive">
+              <div class="form__inner">
+                <span class="form__step">3</span>
+                <legend class="form__title">
+                  Согласие
+                </legend>
+                <div class="form__content">
+                  <div class="form__text">
+                    Требуется ваше согласие по&nbsp;следующим пунктам:
+                  </div>
+                  <ul class="form__list">
+                    <li class="form__list-item">
+                      Я подтверждаю, что вся представленная информация является достоверной и&nbsp;точной;
+                    </li>
+                    <li class="form__list-item">
+                      Я несу ответственность в&nbsp;соответствии с&nbsp;действующим законодательством Российской Федерации за&nbsp;предоставление заведомо ложных или&nbsp;неполных сведений;
+                    </li>
+                    <li class="form__list-item">
+                      Я выражаю свое согласие на&nbsp;необходимое использование и&nbsp;обработку своих персональных данных, в&nbsp;том числе в&nbsp;информационных системах;
+                    </li>
+                    <li class="form__list-item">
+                      Со сроками оказания государственной услуги ознакомлен.
+                    </li>
+                  </ul>
+                  <label class="form__label form__label-checkbox">
+                    <input class="form__checkbox" name="checkbox" type="checkbox">
+                    <span class="form__checkbox_custom"></span>
+                    Я подтверждаю свое согласие со&nbsp;всеми вышеперечисленными пунктами
+                  </label>
+                  <label class="form__label form__label-checkbox">
+                    <input class="form__checkbox" name="checkbox" type="checkbox">
+                    <span class="form__checkbox_custom"></span>
+                    Я уведомлен о&nbsp;том, что результат будет получен в&nbsp;электронном виде
+                  </label>
+                  <div id="error-3" class="form__error">
+                    Пожалуйста, еще раз внимательно проверьте все данные перед отправкой 
+                  </div>
+                  <button id="button-3" class="form__button" type="button">
+                    Отправить
+                  </button>
+                  <div class="form__policy">
+                    Нажимая кнопку «Отправить», вы соглашаетесь c&nbsp;<a href="#">правилами хранения и&nbsp;обработки персональных данных</a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset id="form-4" class="form form_invisible">
+              <div class="form__inner">
+                <span class="form__step">&nbsp;</span>
+                <legend class="form__title">
+                  Заявление принято
+                </legend>
+                <div class="form__text">
+                  Номер заявления <b>RU-1234567</b>. Максимальный срок предоставления услуги — 20 рабочих дней. Следите за&nbsp;статусом заявления в&nbsp;<a class="form__link_person" href="#">Личном кабинете</a>. 
+                </div>
+                <div class="form__text">
+                  Если у&nbsp;вас остались вопросы по&nbsp;оказанию услуги, пожалуйста, обращайтесь по&nbsp;телефону <a class="form__link_phone" href="tel:+73421234567">+7&nbsp;(342)&nbsp;123-45-67</a>.
+                </div>
+                <div class="form__links">
+                  <a href="#">Вернуться в&nbsp;каталог</a>
+                  <a href="#">Перейти в&nbsp;личный кабинет</a>
+                </div>
+              </div>
+            </fieldset>
+
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
